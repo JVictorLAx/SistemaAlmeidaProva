@@ -7,6 +7,7 @@ package view;
 //import bean.Emd_categoria;
 //import dao.Emd_categoriaDAO;
 import javax.swing.JOptionPane;
+import tools.Util;
 
 /**
  *
@@ -22,10 +23,10 @@ public class JDlgCategoria extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro");
         setLocationRelativeTo(null);
-        
-    }
+        Util.habilitar(false, jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                jChbAspirado, jChbTurbo, jTxtDataCriacao, jBtnConfim, jBtnCancelar);
 
-    
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -251,20 +252,33 @@ public class JDlgCategoria extends javax.swing.JDialog {
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-       
+        Util.habilitar(false, jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                jChbAspirado, jChbTurbo, jTxtDataCriacao, jBtnConfim, jBtnCancelar);
+        Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);
+         Util.limpar(jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                jChbAspirado, jChbTurbo, jTxtDataCriacao);
+
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
 
+        Util.habilitar(true, jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                jChbAspirado, jChbTurbo, jTxtDataCriacao, jBtnConfim, jBtnCancelar);
+        Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);
         
-
-
+        Util.limpar(jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                jChbAspirado, jChbTurbo, jTxtDataCriacao);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnConfimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfimActionPerformed
-       
 
+        Util.habilitar(false, jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                jChbAspirado, jChbTurbo, jTxtDataCriacao, jBtnConfim, jBtnCancelar);
+        Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);
+
+        Util.limpar(jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                jChbAspirado, jChbTurbo, jTxtDataCriacao);
     }//GEN-LAST:event_jBtnConfimActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
@@ -275,17 +289,18 @@ public class JDlgCategoria extends javax.swing.JDialog {
         if (resp == JOptionPane.YES_OPTION) {
 //           
             JOptionPane.showMessageDialog(null, "Exclusão feita com sucesso");
-           
+
+            Util.limpar(jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
+                    jChbAspirado, jChbTurbo, jTxtDataCriacao);
         }
 
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
         // TODO add your handling code here:
-        String resp = JOptionPane.showInputDialog(null, " Entre com o código do usúario");
-        if (resp == null) {
-            JOptionPane.showMessageDialog(null, "código em branco");
-        } 
+        JDlgCategoriaPesquisar jDlgCategoriaPesquisar = new JDlgCategoriaPesquisar(null, true);
+        jDlgCategoriaPesquisar.setVisible(true);
+
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jTxtTipoMotorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtTipoMotorActionPerformed

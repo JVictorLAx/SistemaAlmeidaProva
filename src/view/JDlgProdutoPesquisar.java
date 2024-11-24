@@ -4,7 +4,8 @@
  */
 package view;
 
-import java.util.List;
+
+import tools.Util;
 
 /**
  *
@@ -19,7 +20,7 @@ public class JDlgProdutoPesquisar extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
-      
+     
     }
 
     /**

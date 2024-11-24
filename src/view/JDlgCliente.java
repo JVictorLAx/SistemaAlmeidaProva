@@ -8,6 +8,7 @@ package view;
 //import dao.Emd_clienteDAO;
 import java.text.ParseException;
 import javax.swing.JOptionPane;
+import tools.Util;
 
 /**
  *
@@ -23,7 +24,12 @@ public class JDlgCliente extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro");
         setLocationRelativeTo(null);
-      
+       Util.habilitar(false, jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv, jBtnCancelar, jBtnConfim);
+
     }
 
     
@@ -477,77 +483,52 @@ public class JDlgCliente extends javax.swing.JDialog {
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-      
+     Util.habilitar(false, jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv, jBtnCancelar, jBtnConfim);
+
+       Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);   
+       Util.limpar(jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv);
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
+Util.habilitar(true, jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv, jBtnCancelar, jBtnConfim);
 
+       Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);  
         
-
+ Util.limpar(jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv);
 
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnConfimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfimActionPerformed
         // TODO add your handling code here:
-//        Emd_cliente emd_cliente = new Emd_cliente();
-//        int cod = Integer.valueOf(jTxtCodigo.getText());
-//        emd_cliente.setEmd_id_cliente(cod);
-//        emd_cliente.setEmd_nome(jTxtNome.getText());
-//        emd_cliente.setEmd_sobrenome(jTxtSobrenome.getText());
-//        emd_cliente.setEmd_email(jtxtEmail.getText());
-//        emd_cliente.setEmd_telefone(jTxtTelefone.getText());
-//        emd_cliente.setEmd_endereco(jTxtEndereco.getText());
-//        emd_cliente.setEmd_cidade(jTxtCidade.getText());
-//        emd_cliente.setEmd_estado(jTxtEstado.getText());
-//        emd_cliente.setEmd_cep(jTxtCEP.getText());
-//        emd_cliente.setEmd_pais(jTxtPais.getText());
-//        emd_cliente.setEmd_data_nascimento(null);
-//        if (jChbFeminino.isSelected() == true) {
-//            emd_cliente.setEmd_genero("Feminino");
-//        }
-//        if (jChbMasculino.isSelected() == true) {
-//            emd_cliente.setEmd_genero("Masculino");
-//        }
-//        emd_cliente.setEmd_profissao(jTxtProfissao.getText());
-//        if (jChbPerua.isSelected() == true) {
-//            emd_cliente.setEmd_modelo_carro_p("Perua");
-//        }
-//        if (jChbPicapes.isSelected() == true) {
-//            emd_cliente.setEmd_modelo_carro_p("Picape");
-//        }
-//        if (jChbSeda.isSelected() == true) {
-//            emd_cliente.setEmd_modelo_carro_p("Seda");
-//        }
-//        if (jChbSuv.isSelected() == true) {
-//            emd_cliente.setEmd_modelo_carro_p("SUV");
-//        }
-//        if (jChbEsportivo.isSelected() == true) {
-//            emd_cliente.setEmd_modelo_carro_p("Esportivo");
-//        }
-//        if (jChbChevrolet.isSelected() == true) {
-//            emd_cliente.setEmd_marca_carro_p("Chevrolet");
-//        }
-//        if (jChbFerrari.isSelected() == true) {
-//            emd_cliente.setEmd_marca_carro_p("Ferrari");
-//        }
-//        if (jChbHonda.isSelected() == true) {
-//            emd_cliente.setEmd_marca_carro_p("Honda");
-//        }
-//        if (jChbHyundai.isSelected() == true) {
-//            emd_cliente.setEmd_marca_carro_p("Hyundai");
-//        }
-//        if (jChbMercedes.isSelected() == true) {
-//            emd_cliente.setEmd_marca_carro_p("Mercedes");
-//        }
-//        if (jChbPorche.isSelected() == true) {
-//            emd_cliente.setEmd_marca_carro_p("Porche");
-//        }
-//
-//        Emd_clienteDAO emd_clienteDAO = new Emd_clienteDAO();
-//        emd_clienteDAO.insert(emd_cliente);
+Util.habilitar(false, jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv, jBtnCancelar, jBtnConfim);
 
-       
+       Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);  
+        Util.limpar(jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv);
     }//GEN-LAST:event_jBtnConfimActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
@@ -559,15 +540,17 @@ public class JDlgCliente extends javax.swing.JDialog {
             
         }
 
-
+ Util.limpar(jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
+              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
+              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
+              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
+              jChbPorche, jChbSeda, jChbSuv);
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
         // TODO add your handling code here:
-        String resp = JOptionPane.showInputDialog(null, " Entre com o código do usúario");
-        if (resp == null) {
-            JOptionPane.showMessageDialog(null, "código em branco");
-        } 
+         JDlgClientePesquisar jDlgClientePesquisar = new JDlgClientePesquisar(null, true);
+        jDlgClientePesquisar.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jTxtSobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtSobrenomeActionPerformed

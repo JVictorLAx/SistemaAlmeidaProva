@@ -6,6 +6,7 @@ package view;
 
 
 import javax.swing.JOptionPane;
+import tools.Util;
 
 /**
  *
@@ -21,7 +22,10 @@ public class JDlgProduto extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro");
         setLocationRelativeTo(null);
-       
+       Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv, jBtnCancelar, jBtnConfim);
+
     }
 
    
@@ -313,20 +317,38 @@ public class JDlgProduto extends javax.swing.JDialog {
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-       
+       Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv, jBtnCancelar, jBtnConfim);
+        
+ Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);  
+ Util.limpar(jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv); 
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
-
+Util.habilitar(true, jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv, jBtnCancelar, jBtnConfim);
         
-
-
+ Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir);   
+Util.limpar(jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv); 
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnConfimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfimActionPerformed
         // TODO add your handling code here:
-       
+       Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv, jBtnCancelar, jBtnConfim);
+        
+ Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnPesquisar, jBtnExcluir); 
+ Util.limpar(jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv); 
     }//GEN-LAST:event_jBtnConfimActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
@@ -338,15 +360,15 @@ public class JDlgProduto extends javax.swing.JDialog {
             
         }
 
-
+Util.limpar(jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
+               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
+               jChbSuv); 
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
         // TODO add your handling code here:
-       String resp = JOptionPane.showInputDialog(null, " Entre com o código do usúario");
-        if (resp == null) {
-            JOptionPane.showMessageDialog(null, "código em branco");
-        }
+      JDlgProdutoPesquisar jDlgProdutoPesquisar = new JDlgProdutoPesquisar(null, true);
+        jDlgProdutoPesquisar.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jTxtPrecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtPrecoActionPerformed
