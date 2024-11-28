@@ -355,10 +355,9 @@ Util.limpar(jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL,
         // TODO add your handling code here:
 
         int resp = JOptionPane.showConfirmDialog(null, "Confirmar Exclusão !", "Deletar registro", JOptionPane.YES_NO_OPTION);
+         JOptionPane.showMessageDialog(null, "Exclusão feita com sucesso");
 
-        if (resp == JOptionPane.YES_OPTION) {
-            
-        }
+        if (resp == JOptionPane.YES_OPTION) {}
 
 
     }//GEN-LAST:event_jBtnExcluirActionPerformed

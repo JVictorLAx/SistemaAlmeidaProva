@@ -535,6 +535,7 @@ Util.habilitar(false, jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN,
         // TODO add your handling code here:
 
         int resp = JOptionPane.showConfirmDialog(null, "Confirmar Exclusão !", "Deletar registro", JOptionPane.YES_NO_OPTION);
+         JOptionPane.showMessageDialog(null, "Exclusão feita com sucesso");
 
         if (resp == JOptionPane.YES_OPTION) {
             

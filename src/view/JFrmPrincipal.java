@@ -30,9 +30,12 @@ public class JFrmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMnuCadastro = new javax.swing.JMenu();
+        jMnuAvaliacao = new javax.swing.JMenuItem();
         jMnuCategoria = new javax.swing.JMenuItem();
         jMnuCliente = new javax.swing.JMenuItem();
+        jMnuFornecedor = new javax.swing.JMenuItem();
         jMnuProduto = new javax.swing.JMenuItem();
+        jMnuUsuarios = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMnuSair = new javax.swing.JMenuItem();
         jMnuMovimentos = new javax.swing.JMenu();
@@ -42,6 +45,15 @@ public class JFrmPrincipal extends javax.swing.JFrame {
 
         jMnuCadastro.setMnemonic('C');
         jMnuCadastro.setText("Cadastros");
+
+        jMnuAvaliacao.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuAvaliacao.setText("Avaliação");
+        jMnuAvaliacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuAvaliacaoActionPerformed(evt);
+            }
+        });
+        jMnuCadastro.add(jMnuAvaliacao);
 
         jMnuCategoria.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuCategoria.setText("Categoria");
@@ -61,6 +73,15 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         });
         jMnuCadastro.add(jMnuCliente);
 
+        jMnuFornecedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuFornecedor.setText("Fornecedor");
+        jMnuFornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuFornecedorActionPerformed(evt);
+            }
+        });
+        jMnuCadastro.add(jMnuFornecedor);
+
         jMnuProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuProduto.setText("Produto");
         jMnuProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +90,17 @@ public class JFrmPrincipal extends javax.swing.JFrame {
             }
         });
         jMnuCadastro.add(jMnuProduto);
+
+        jMnuUsuarios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/imagens/cliente.png"))); // NOI18N
+        jMnuUsuarios.setMnemonic('U');
+        jMnuUsuarios.setText("Usuarios");
+        jMnuUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuUsuariosActionPerformed(evt);
+            }
+        });
+        jMnuCadastro.add(jMnuUsuarios);
         jMnuCadastro.add(jSeparator1);
 
         jMnuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -98,34 +130,54 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGap(0, 277, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMnuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuUsuariosActionPerformed
+        // TODO add your handling code here:
+        
+        JDlgUsuarios jDlgUsuarios  = new JDlgUsuarios(null, true);
+        jDlgUsuarios.setVisible(true);
+       
+    }//GEN-LAST:event_jMnuUsuariosActionPerformed
 
     private void jMnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuSairActionPerformed
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jMnuSairActionPerformed
 
-    private void jMnuProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuProdutoActionPerformed
-        // TODO add your handling code here:
-        JDlgProduto jDlgProduto = new JDlgProduto(null, true);
-        jDlgProduto.setVisible(true);
-    }//GEN-LAST:event_jMnuProdutoActionPerformed
-
     private void jMnuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuClienteActionPerformed
         // TODO add your handling code here:
-        JDlgCliente jDlgCliente = new JDlgCliente(null, true);
+         JDlgCliente jDlgCliente = new JDlgCliente(null, true);
         jDlgCliente.setVisible(true);
     }//GEN-LAST:event_jMnuClienteActionPerformed
+
+    private void jMnuAvaliacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuAvaliacaoActionPerformed
+        // TODO add your handling code here:
+        JDlgAvaliacaoProduto jDlgAvaliacaoProduto = new JDlgAvaliacaoProduto(null, true);
+        jDlgAvaliacaoProduto.setVisible(true);
+    }//GEN-LAST:event_jMnuAvaliacaoActionPerformed
+
+    private void jMnuFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuFornecedorActionPerformed
+        // TODO add your handling code here:
+        JDlgFornecedor jDlgFornecedor = new JDlgFornecedor(null, true);
+        jDlgFornecedor.setVisible(true);
+    }//GEN-LAST:event_jMnuFornecedorActionPerformed
 
     private void jMnuCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuCategoriaActionPerformed
         // TODO add your handling code here:
         JDlgCategoria jDlgCategoria = new JDlgCategoria(null, true);
         jDlgCategoria.setVisible(true);
     }//GEN-LAST:event_jMnuCategoriaActionPerformed
+
+    private void jMnuProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuProdutoActionPerformed
+        // TODO add your handling code here:
+        JDlgProduto jDlgProduto = new JDlgProduto(null, true);
+        jDlgProduto.setVisible(true);
+    }//GEN-LAST:event_jMnuProdutoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,12 +216,15 @@ public class JFrmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMnuAvaliacao;
     private javax.swing.JMenu jMnuCadastro;
     private javax.swing.JMenuItem jMnuCategoria;
     private javax.swing.JMenuItem jMnuCliente;
+    private javax.swing.JMenuItem jMnuFornecedor;
     private javax.swing.JMenu jMnuMovimentos;
     private javax.swing.JMenuItem jMnuProduto;
     private javax.swing.JMenuItem jMnuSair;
+    private javax.swing.JMenuItem jMnuUsuarios;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     // End of variables declaration//GEN-END:variables
