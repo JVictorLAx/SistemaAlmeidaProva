@@ -540,11 +540,7 @@ Util.habilitar(false, jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN,
             
         }
 
- Util.limpar(jTxtCodigo, jTxtNome, jtxtEmail, jTxtSobrenome, jtxtDataN, 
-              jTxtTelefone, jTxtCEP, jTxtCidade, jTxtEstado, jTxtPais, jTxtProfissao,
-              jTxtEndereco, jChbChevrolet, jChbEsportivo, jChbFeminino, jChbFerrari,
-              jChbHonda, jChbHyundai, jChbMasculino, jChbMercedes, jChbPerua, jChbPicapes, 
-              jChbPorche, jChbSeda, jChbSuv);
+
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed

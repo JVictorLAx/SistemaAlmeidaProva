@@ -360,9 +360,7 @@ Util.limpar(jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL,
             
         }
 
-Util.limpar(jTxtCodigo, jTxtNome, jTxtCor, jTxtPreco, jTxtURL, 
-               jTxtDescricao, jChbEsportivo, jChbPerua, jChbPicapes, jChbSeda, 
-               jChbSuv); 
+
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed

@@ -82,6 +82,8 @@ public class JDlgCategoriaPesquisar extends javax.swing.JDialog {
 
     private void JBtnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnOKActionPerformed
         // TODO add your handling code here:
+                this.dispose();
+
     }//GEN-LAST:event_JBtnOKActionPerformed
 
     /**

@@ -290,8 +290,6 @@ public class JDlgCategoria extends javax.swing.JDialog {
 //           
             JOptionPane.showMessageDialog(null, "Exclusão feita com sucesso");
 
-            Util.limpar(jTxtCodigo, jTxtNomeCategoria, jTxtVeiculos, jTxtTipoMotor, jTxtDesc,
-                    jChbAspirado, jChbTurbo, jTxtDataCriacao);
         }
 
     }//GEN-LAST:event_jBtnExcluirActionPerformed

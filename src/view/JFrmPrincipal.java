@@ -36,8 +36,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMnuSair = new javax.swing.JMenuItem();
         jMnuMovimentos = new javax.swing.JMenu();
-        jMnuVendas = new javax.swing.JMenuItem();
-        jMnuCompra = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,12 +84,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMnuCadastro);
 
         jMnuMovimentos.setText("Movimentos");
-
-        jMnuVendas.setText("Venda ");
-        jMnuMovimentos.add(jMnuVendas);
-
-        jMnuCompra.setText("Compra");
-        jMnuMovimentos.add(jMnuCompra);
         jMnuMovimentos.add(jSeparator2);
 
         jMenuBar1.add(jMnuMovimentos);
@@ -175,11 +167,9 @@ public class JFrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMnuCadastro;
     private javax.swing.JMenuItem jMnuCategoria;
     private javax.swing.JMenuItem jMnuCliente;
-    private javax.swing.JMenuItem jMnuCompra;
     private javax.swing.JMenu jMnuMovimentos;
     private javax.swing.JMenuItem jMnuProduto;
     private javax.swing.JMenuItem jMnuSair;
-    private javax.swing.JMenuItem jMnuVendas;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     // End of variables declaration//GEN-END:variables
